@@ -1,0 +1,56 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+  <p>Part 1: Magenta</p>
+  <form action="magenta.html">
+    <button class="btn btn-danger btn-lg">Click</button>
+  </form>
+
+  <p>Part 2: Game of life. Select cells to fill in and click play</p>
+  <form action="cellularAutomata.html">
+    <button class="btn btn-danger btn-lg">Click</button>
+  </form>
+
+  <div>
+    <h2>Magenta/Cellular Automata</h2>
+    <p>
+      In this lab, I implemented automated composition. </p>
+    <p>
+      First, using magenta.js library (https://magenta.github.io/magenta-js/music/globals.html), I used MusicRNN to load
+      a trained RNN model, and use
+      quantized sequences to play twinkle twinkle little star. In addition, using webAudio, I added an option to choose
+      the synth mode, and the waveform.
+    </p>
+
+    <p>
+      For the second part of the lab, using "https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js", I created cellular
+      automata- Game of Life. One can click several cells on a 2d matrix and click play to generate sound. The sound
+      changes as the cells live/die.
+      Originally, my idea was to create a 2d array with same size of the matrix for game of life, each comprised of
+      unique oscillators, and play/stop them as the cell on the specific row and coloumn lives/dies.
+      <br><br>
+      However, I learned that starting and stopping multiple oscillators with webAudio is not as supported, so I decided
+      to simplify my idea: Every cell that alive increases value of
+      modulator frequency and gain node that it connects to.
+    </p>
+    <p>
+      Combining visual components with sound was very satisfying and interesting- rather than letting sound control the
+      visuals like we did in class, in this project my initial selection of cells affected the sound output.
+    </p>
+
+    <br>
+    <br>
+    The code for the project described above can be found here:
+    https://github.com/ChangSuNam/automatedComposition
+
+
+  </div>
+
+</body>
+
+
+</html>
